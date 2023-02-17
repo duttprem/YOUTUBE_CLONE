@@ -15,6 +15,7 @@ import NotificationsSharpIcon from "@mui/icons-material/NotificationsSharp";
 
 import AccountCircleSharpIcon from "@mui/icons-material/AccountCircleSharp";
 import { Link } from "react-router-dom";
+import { TextField } from "@mui/material";
 function Header() {
   const [inputsearch, setinputsearch] = useState("");
   return (
@@ -27,8 +28,10 @@ function Header() {
           alt=""
         />
       </div>
-      <div className="header_input">
-        <input
+      <div className="header_input" >
+        <TextField
+        fullWidth
+        size="small"
           onChange={(e) => setinputsearch(e.target.value)}
           value={inputsearch}
           placeholder="Search"
